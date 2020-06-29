@@ -11,7 +11,7 @@ def index(request):
 def upload(request):
     for count,x in enumerate(request.FILES.getlist('files')):
         def process(f):
-            with open('D:\pro\python\djan\mysite\Files\{}'.format(str(x)), 'wb+') as destination:
+            with open('D:\pro\python\djan\django1\mysite\Files\{}'.format(str(x)), 'wb+') as destination:
                 for chunk in f.chunks():
                     destination.write(chunk)
         process(x)
